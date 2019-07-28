@@ -1,0 +1,20 @@
+<div *ngIf="loggedIn()">
+  <app-header></app-header>
+  <div class="app-body">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div *ngIf="!loggedIn()" class="login-wrapper">
+  <div class="login-column" style="background-image: url(/assets/login.png)">
+  </div>
+  <div class="login-column">
+    <div class="jumbotron login-message">
+        <h1 class="display-4">VAO</h1>
+        <p class="lead">Easily manage your financial KPIs</p>
+    </div>
+    <app-login></app-login>
+  </div>
+</div>
+
+<!--<app-footer></app-footer>-->
